@@ -46,7 +46,8 @@ const PropertiesTable = ({
 
   return (
     <BaseCard className="px-10 py-5">
-      {propertyToDelete && (
+      <span>xxx</span>
+      {/* {propertyToDelete && (
         <ConfirmModel
           title={`Are you sure you want to delete "${propertyToDelete.title}"`}
           subtitle="This action is irreversible and permanent"
@@ -165,7 +166,7 @@ const PropertiesTable = ({
       )}
       <div className="w-full py-10">
         <Pagination prevPage={1} currentPage={1} nextPage={3} totalPages={1} />
-      </div>
+      </div> */}
     </BaseCard>
   );
 };

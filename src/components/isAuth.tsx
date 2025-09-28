@@ -1,15 +1,15 @@
 "use client";
-import { redirect } from "next/navigation";
+// import { redirect } from "next/navigation";
 import React from "react";
-import { useSession } from "next-auth/react";
+// import { useSession } from "next-auth/react";
 
 export default function isAuth(Component: any) {
   return function IsAuth(props: any) {
-    const { data: session } = useSession();
-    if (!session) {
+    // const { data: session } = useSession();
+    // if (!session) {
       // redirect("/");
-    }
+    // }
 
-    return <Component user={session?.user} {...props} />;
+    return <Component user={{}} {...props} />;
   };
 }

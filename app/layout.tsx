@@ -1,9 +1,10 @@
 import React from "react";
 import { Syne } from "next/font/google";
-// import { primaryColorBg } from "@/constants/values";
-import { SessionProvider } from "next-auth/react";
 import { ToastContainer } from "react-toastify";
 import { Metadata } from 'next';
+import NavigationSection from "@/src/views/common/Navigation";
+import Footer from "@/src/views/common/Footer";
+// @ts-ignore
 import "./globals.css";
 
 const syne = Syne({
@@ -26,13 +27,12 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={syne.className}
-        // style={{ backgroundColor: primaryColorBg }}
         suppressHydrationWarning
       >
-        {/* <SessionProvider> */}
           <ToastContainer />
+          <NavigationSection />
           {children}
-        {/* </SessionProvider> */}
+          <Footer />
       </body>
     </html>
   );

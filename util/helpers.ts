@@ -84,3 +84,7 @@ export const generateFileName = (text?: string): string => {
 export const formatPrice = (num: number | string): string => {
   return Number(num).toLocaleString(undefined, { maximumFractionDigits: 0 });
 };
+
+export const handleContactWhatsapp = (num?: string) => {
+};
+

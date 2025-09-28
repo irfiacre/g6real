@@ -3,22 +3,31 @@ import React from "react";
 const BaseButton = ({
   label,
   handleClick,
+  disabled,
   additionalCSS,
-  overrideCSS
+  overrideCSS,
+  children,
 }: {
-  label: string;
+  label?: string;
   handleClick: (data: any) => void;
+  disabled?: boolean;
   additionalCSS?: string;
-  overrideCSS?: string
+  overrideCSS?: string;
+  children?: any;
 }) => {
   return (
     <div>
       <button
-        className={overrideCSS ? overrideCSS: `px-5 py-3 text-primary bg-primaryLight rounded-full font-medium text-base hover:bg-primary hover:text-primaryLight hover:cursor-pointer ${additionalCSS}`}
+        className={
+          overrideCSS
+            ? overrideCSS
+            : `capitalize px-5 py-3 text-primary bg-primaryLight rounded-full font-medium text-base hover:bg-primary hover:text-primaryLight hover:cursor-pointer ${additionalCSS}`
+        }
         type="button"
         onClick={handleClick}
+        disabled={disabled || false}
       >
-        {label}
+        {children ? children : label}
       </button>
     </div>
   );

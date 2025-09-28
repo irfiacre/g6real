@@ -29,6 +29,7 @@ const config: Config = {
         modalBackground: "#911259",
         progressBarBackgroundColor: "#F4F3FD",
         footerBackground: "#263238",
+        testimonyBackground: "#F1F2ED"
       },
     },
   },

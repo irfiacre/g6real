@@ -25,24 +25,8 @@ export default function CarouselWithText({ slides }: CarouselProps) {
   }, []);
 
   return (
-    <div className="relative w-full max-w-3xl mx-auto overflow-hidden rounded-lg">
-      {/* Navigation Buttons */}
-      <div className="absolute inset-0 flex items-center justify-between z-20 pointer-events-none">
-        <button
-          onClick={prev}
-          className="pointer-events-auto p-2 bg-white/70 hover:bg-white rounded-full m-2"
-        >
-          ◀
-        </button>
-        <button
-          onClick={next}
-          className="pointer-events-auto p-2 bg-white/70 hover:bg-white rounded-full m-2"
-        >
-          ▶
-        </button>
-      </div>
-
-      {/* Slides */}
+    <div className="relative w-full max-w-3xl overflow-hidden rounded-3xl">
+      <div className="absolute inset-0 flex items-center justify-between z-20 pointer-events-none"></div>
       <div className="relative h-64 sm:h-80 md:h-96">
         <AnimatePresence>
           <motion.div
@@ -58,9 +42,7 @@ export default function CarouselWithText({ slides }: CarouselProps) {
               alt={slides[index].caption}
               className="w-full h-full object-cover"
             />
-            {/* Dark overlay to reduce brightness */}
             <div className="absolute inset-0 bg-black/50"></div>
-            {/* Text overlay */}
             <div className="absolute inset-0 flex items-center justify-center px-4">
               <h2 className="text-white text-lg sm:text-2xl md:text-3xl font-semibold text-center">
                 {slides[index].caption}

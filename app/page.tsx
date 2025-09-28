@@ -1,19 +1,16 @@
 "use client"
-import Footer from "@/src/components/landingPage/Footer";
-import NavigationSection from "@/src/components/landingPage/Navigation";
-import SecondSection from "@/src/components/landingPage/SecondSection";
-import TopSection from "@/src/components/landingPage/TopSection";
-import { useSession } from "next-auth/react";
+import Footer from "@/src/views/common/Footer";
+import ListingsSection from "@/src/views/landingPage/ListingsSection";
+import TopSection from "@/src/views/landingPage/TopSection";
+import TestimonialsSection from "@/src/views/landingPage/Testimonials";
 
 const LandingPage = () => {
   
-  // const { data: session } = useSession();
   return (
-    <div className="bg-backgroundColor">
-      <NavigationSection user={{}}/>
-      <TopSection user={{}} />
-      {/* <SecondSection user={{}} /> */}
-      {/* <Footer /> */}
+    <div className="bg-white mt-16">
+      <TopSection />
+      <ListingsSection />
+      <TestimonialsSection />
     </div>
   );
 };

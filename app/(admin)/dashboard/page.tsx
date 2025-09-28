@@ -1,9 +1,10 @@
 "use client";
-import DashboardPage from "@/src/views/pages/Dashboard";
-import { useSession } from "next-auth/react";
+// import DashboardPage from "@/src/views/pages/Dashboard";
+// import { useSession } from "next-auth/react";
 
-export default function Home() {
-  const { data: session } = useSession();
+export default function Page() {
+  // const { data: session } = useSession();
 
-  return  <DashboardPage userInfo={session?.user} />
+  return  <div> Some Dashboard</div>
+  // <DashboardPage userInfo={session?.user} />
 }

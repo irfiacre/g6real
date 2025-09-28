@@ -11,7 +11,7 @@ const BaseCard = ({
 }) => {
   return (
     <div
-      className={`w-full bg-white border border-backgroundColor2 rounded-3xl ${className}`}
+      className={`w-full bg-white rounded-3xl ${className}`}
       onClick={onClick}
     >
       {children}

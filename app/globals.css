@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --bg-color: #F7F8FC;
+  --bg-color: #FFF;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #F7F8FC;
+    --bg-color: #FFF;
   }
 }
 
