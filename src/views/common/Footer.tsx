@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import Image from "next/image";
+import logoSVG from "@/public/img/logo.svg"
 
 const Footer = () => {
   const socialMedia = [
@@ -14,7 +16,14 @@ const Footer = () => {
     <footer className="px-10 py-10 bg-primary text-primaryLight flex flex-row items-center justify-between max-md:px-5 max-md:flex-wrap max-md:space-y-10">
       <div className="space-y-10 w-full">
         <div className="flex items-center">
-          <Icon icon="game-icons:house-keys" fontSize={40} className="" />
+          {/* <Icon icon="game-icons:house-keys" fontSize={40} className="" /> */}
+          <Image                 className="rounded-xl w-full h-[30vh] object-cover bg-textLightColor"
+                loader={() => logoSVG}
+                src={logoSVG}
+                alt="Logo"
+                height={400}
+                width={400}
+                unoptimized />
           <span className="text-4xl font-semibold">G6 Real Estate</span>
         </div>
         <div>

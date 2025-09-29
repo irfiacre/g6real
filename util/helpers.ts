@@ -1,3 +1,4 @@
+import { WHATSAPP_CONTACT_PHONE } from "@/constants/fixtures";
 import moment from "moment";
 
 export const emailValidate = (email: string) => {
@@ -85,6 +86,11 @@ export const formatPrice = (num: number | string): string => {
   return Number(num).toLocaleString(undefined, { maximumFractionDigits: 0 });
 };
 
-export const handleContactWhatsapp = (num?: string) => {
-};
+export const handleContactWhatsapp = (message?: string) => {
+  let URL = `https://wa.me/${WHATSAPP_CONTACT_PHONE}`;
+  if (message) {
+    URL += `?text=${encodeURIComponent(message)}`;
+  }
 
+  window.open(URL);
+};

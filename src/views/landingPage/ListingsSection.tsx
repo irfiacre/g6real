@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const ListingsSection = () => {
   const [cardContent, setCardContent] = useState<Array<ListingType>>([
-    ...LISTINGS
+    ...LISTINGS,
   ]);
   const [loading, setLoading] = useState<boolean>(false);
   // useEffect(() => {
@@ -26,19 +26,18 @@ const ListingsSection = () => {
           Latest Listings
         </span>
       </div>
-      {/* <div> */}
-        <div className="grid grid-cols-4 max-sm:grid-cols-1 gap-5 max-lg:grid-cols-3 max-md:grid-cols-2">
-          {cardContent.map((item: ListingType) => (
-            <ListingCard key={item.id} content={item} />
-          ))}
-          {!loading && !cardContent[0] && (
-            <div className="py-10 px-10">
-              <span className="text-textLightColor text-2xl font-light">
-                No Listing Available
-              </span>
-            </div>
-          )}
-        </div>
+      <div className="grid grid-cols-4 max-sm:grid-cols-1 gap-5 max-lg:grid-cols-3 max-md:grid-cols-2">
+        {cardContent.map((item: ListingType) => (
+          <ListingCard key={item.id} content={item} />
+        ))}
+        {!loading && !cardContent[0] && (
+          <div className="py-10 px-10">
+            <span className="text-textLightColor text-2xl font-light">
+              No Listing Available
+            </span>
+          </div>
+        )}
+      </div>
     </section>
   );
 };

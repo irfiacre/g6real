@@ -4,6 +4,8 @@ export const PLACEHOLDER_IMG =
 export const DEFAULT_IMAGE =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeJQeJyzgAzTEVqXiGe90RGBFhfp_4RcJJMQ&s";
 
+export const WHATSAPP_CONTACT_PHONE="250788210336"
+
 export const LISTINGS = [
   {
     id: "xxxx01",

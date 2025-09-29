@@ -5,6 +5,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import Carousel from "../../components/Carousel";
 import BaseInput from "../../components/BaseInput";
 import { SearchInterface } from "@/constants/interfaces";
+import { handleContactWhatsapp } from "../../../util/helpers";
 
 const TopSection = () => {
   const slides = [
@@ -32,10 +33,6 @@ const TopSection = () => {
       ...prevState,
       [e.target.id]: e.target.value,
     }));
-  };
-
-  const handleGetIntouch = () => {
-    console.log("-----------------");
   };
 
   const handleSearchButtonClicked = () => {
@@ -100,7 +97,11 @@ const TopSection = () => {
           <div className="py-5 max-md:hidden">
             <BaseButton
               additionalCSS="block px-30 flex flex-row items-center justify-center gap-2"
-              handleClick={handleGetIntouch}
+              handleClick={() =>
+                handleContactWhatsapp(
+                  "I would like to work with you/ Ncaka ko twakorana!"
+                )
+              }
             >
               <span>Get in Touch</span>
               <Icon icon="ic:baseline-whatsapp" fontSize={24} />
@@ -152,7 +153,11 @@ const TopSection = () => {
             <p className="text-center text-primary/50"> Or </p>
             <BaseButton
               additionalCSS="w-full px-30 py-5 flex flex-row items-center justify-center gap-2"
-              handleClick={handleGetIntouch}
+              handleClick={() =>
+                handleContactWhatsapp(
+                  "I would like to work with you/ Ncaka kubabaza!"
+                )
+              }
             >
               <span>Get in Touch</span>
               <Icon icon="ic:baseline-whatsapp" fontSize={24} />

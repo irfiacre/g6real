@@ -3,15 +3,13 @@ import BaseCard from "./BaseCard";
 import Image from "next/image";
 import { ListingType } from "@/constants/interfaces";
 import LocationComponent from "../LocationComponent";
-import { formatPrice } from "@/util/helpers";
+import { handleContactWhatsapp } from "@/util/helpers";
 import BaseButton from "../BaseButton";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
 
 const ListingCard = ({ content }: { content: ListingType }) => {
-  const handleLetsTalk = () => {
-    console.log("lets talk (whatsapp integration)");
-  };
+ 
   return (
     <BaseCard
       key={`${content.id}`}
@@ -31,7 +29,10 @@ const ListingCard = ({ content }: { content: ListingType }) => {
         </div>
         <div className="px-2 space-y-5 pb-2.5">
           <p className="text-xl text-justify">
-            {content.title.substring(0, 50)} <span className="text-sm text-primary/50">{content.isSold? "(Sold)": ""}</span>
+            {content.title.substring(0, 50)}{" "}
+            <span className="text-sm text-primary/50">
+              {content.isSold ? "(Sold)" : ""}
+            </span>
           </p>
           <LocationComponent text={content.location} />
         </div>
@@ -41,7 +42,15 @@ const ListingCard = ({ content }: { content: ListingType }) => {
         <BaseButton
           additionalCSS="px-30 flex flex-row items-center justify-center gap-2 disabled:bg-gray-400 disabled:cursor-default"
           disabled={content.isSold}
-          handleClick={handleLetsTalk}
+          handleClick={() =>
+            handleContactWhatsapp(`
+Hello G6 Real Estate, I am interested in this listing
+Title: "${content.title}",
+URL: ${window.location}/listings/${content.id}
+
+Thank you
+`)
+          }
         >
           <span>Lets Talk</span>
           <Icon icon="ic:baseline-whatsapp" fontSize={24} />
