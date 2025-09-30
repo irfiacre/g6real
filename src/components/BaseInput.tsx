@@ -9,6 +9,7 @@ const BaseInput = ({
   placeholder,
   label,
   id,
+  ...props
 }: {
   value: string;
   onInputChange: (data: any) => void;
@@ -41,6 +42,7 @@ const BaseInput = ({
         placeholder={placeholder || "Add text"}
         value={value}
         onChange={onInputChange}
+        {...props}
       />
     </div>
   );

@@ -14,6 +14,12 @@ export const Sidebar = () => {
         url: "dashboard",
         icon: "material-symbols:dashboard",
       },
+      {
+        title: "Users",
+        subtitle: "Manage Users",
+        url: "users",
+        icon: "mdi:users",
+      },
     ],
   };
   const [searchText, setSearchText] = useState("");
@@ -25,8 +31,8 @@ export const Sidebar = () => {
   return (
     <div className="px-6 py-9 border border-r-sidebarBorderColor h-lvh flex flex-col gap-6">
       <div>
-        <div className="flex justify-center align-middle items-center gap-2 text-textColor">
-          <Link href="/" className="bg-textColor p-2 rounded-md">
+        <div className="flex justify-center align-middle items-center gap-2 text-primary">
+          <Link href="/" className="bg-primary p-2 rounded-md">
             <Icon
               icon="game-icons:house-keys"
               fontSize={50}
@@ -44,7 +50,9 @@ export const Sidebar = () => {
         </div>
       </div>
       <div>
-        <MenuItem content={sidebarMenu.dashboard[0]} />
+        {sidebarMenu.dashboard.map((menuItem) => (
+          <MenuItem content={menuItem} />
+        ))}
       </div>
     </div>
   );

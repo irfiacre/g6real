@@ -1,5 +1,4 @@
 "use client"
-import Footer from "@/src/views/common/Footer";
 import ListingsSection from "@/src/views/landingPage/ListingsSection";
 import TopSection from "@/src/views/landingPage/TopSection";
 import TestimonialsSection from "@/src/views/landingPage/Testimonials";

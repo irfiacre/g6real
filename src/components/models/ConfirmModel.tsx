@@ -30,7 +30,7 @@ const ConfirmModel = ({
 
               <div className="sm:flex sm:items-start">
                 <div className="mx-auto flex size-12 shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:size-10">
-                  <ExclamationTriangleIcon aria-hidden="true" className="size-6 text-textColor" />
+                  <ExclamationTriangleIcon aria-hidden="true" className="size-6 text-primary" />
                 </div>
                 <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                   <p>
@@ -50,7 +50,7 @@ const ConfirmModel = ({
                 type="button"
                 onClick={() => handleConfirmed()}
                 disabled={loading}
-                className={`inline-flex w-full justify-center rounded-md ${isDelete?"bg-red-600 hover:bg-red-500":"bg-textColor hover:bg-textColor/80"} px-10 py-2 text-sm font-semibold text-white shadow-xs  sm:ml-3 sm:w-auto disabled:bg-gray-500`}
+                className={`inline-flex w-full justify-center rounded-md ${isDelete?"bg-red-600 hover:bg-red-500":"bg-primary hover:bg-primary/80"} px-10 py-2 text-sm font-semibold text-white shadow-xs  sm:ml-3 sm:w-auto disabled:bg-gray-500`}
               >
                 Yes
               </button>

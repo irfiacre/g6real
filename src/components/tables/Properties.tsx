@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { formatPrice } from "@/util/helpers";
 import ConfirmModel from "../models/ConfirmModel";
+import BaseButton from "../buttons/BaseButton";
 
 const PropertiesTable = ({
   data,
@@ -45,9 +46,8 @@ const PropertiesTable = ({
     setPropertyToDelete(propertyId);
 
   return (
-    <BaseCard className="px-10 py-5">
-      <span>xxx</span>
-      {/* {propertyToDelete && (
+    <BaseCard className="px-10 py-5 border border-backgroundColor">
+      {propertyToDelete && (
         <ConfirmModel
           title={`Are you sure you want to delete "${propertyToDelete.title}"`}
           subtitle="This action is irreversible and permanent"
@@ -66,9 +66,12 @@ const PropertiesTable = ({
 
       <div className="py-5 text-textLightColor text-base font-semibold flex flex-row justify-between items-center">
         <span>Total = {data.length}</span>
-        <div className="text-white bg-textColor hover:bg-white hover:text-textColor border border-textColor focus:outline-none font-normal rounded-3xl text-sm text-center p-4">
-          <Link href="/properties">Add Another Property</Link>
-        </div>
+        <Link href="/properties">
+          <BaseButton additionalCSS="w-full flex flex-row items-center justify-center gap-2.5 font-medium">
+            <Icon icon="carbon:add-filled" fontSize={24} />
+            Add New
+          </BaseButton>
+        </Link>
       </div>
       <div className="py-2.5 text-textLightColor text-base font-semibold flex flex-row align-middle items-center px-1.5 gap-3.5 cursor-pointer bg-backgroundColor">
         <span className="w-full">Title</span>
@@ -145,7 +148,7 @@ const PropertiesTable = ({
                 </div>
 
                 <div className="w-2/4">
-                  <div className="inline-flex self-center items-center p-2 text-sm font-medium text-center text-textLightColor bg-inherit rounded-full hover:bg-textColor hover:text-white focus:outline-none">
+                  <div className="inline-flex self-center items-center p-2 text-sm font-medium text-center text-textLightColor bg-inherit rounded-full hover:bg-primary hover:text-white focus:outline-none">
                     <Link href={`/properties/edit/${item.property_id}`}>
                       <Icon icon="tabler:edit" fontSize={20} />
                     </Link>
@@ -166,7 +169,7 @@ const PropertiesTable = ({
       )}
       <div className="w-full py-10">
         <Pagination prevPage={1} currentPage={1} nextPage={3} totalPages={1} />
-      </div> */}
+      </div>
     </BaseCard>
   );
 };

@@ -2,8 +2,6 @@ import React from "react";
 import { Syne } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import { Metadata } from 'next';
-import NavigationSection from "@/src/views/common/Navigation";
-import Footer from "@/src/views/common/Footer";
 // @ts-ignore
 import "./globals.css";
 
@@ -24,15 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full m-0">
       <body
-        className={syne.className}
+        className={`${syne.className} h-full m-0`}
         suppressHydrationWarning
       >
           <ToastContainer />
-          <NavigationSection />
           {children}
-          <Footer />
       </body>
     </html>
   );

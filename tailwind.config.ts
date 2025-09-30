@@ -17,7 +17,6 @@ const config: Config = {
       colors: {
         primary: "#213D34",
         primaryLight: "#D9EF78",
-        textColor: "#302D5F",
         textLightColor: "#858597",
         backgroundColor: "#E3E4E0",
         menuIconBackground: "#EAEAFF",

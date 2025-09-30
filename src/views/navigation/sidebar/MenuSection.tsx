@@ -13,13 +13,13 @@ export const MenuItem = ({ content }: { content: any }) => {
       <div
         className={`py-4 px-5 mx-3 flex flex-row justify-start items-center gap-4 ${
           active
-            ? "bg-textColor rounded-3xl"
+            ? "bg-primary rounded-3xl"
             : " hover:bg-menuIconBackground hover:rounded-3xl"
         }`}
       >
         <div
           className={`h-10 w-10 flex items-center justify-center rounded-full  ${
-            active ? "bg-textColor" : "bg-menuIconBackground"
+            active ? "bg-primary" : "bg-menuIconBackground"
           }`}
         >
           <Icon

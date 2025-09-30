@@ -23,7 +23,7 @@ const BaseButton = ({
             ? overrideCSS
             : `capitalize px-5 py-3 text-primary bg-primaryLight rounded-full font-medium text-base hover:bg-primary hover:text-primaryLight hover:cursor-pointer ${additionalCSS}`
         }
-        type="button"
+        type="submit"
         onClick={handleClick}
         disabled={disabled || false}
       >

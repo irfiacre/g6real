@@ -20,7 +20,7 @@ const LogoComponent = ({
     fontSize2: small ? 34 : medium ? 48 : 88,
   };
   return (
-    <div className="flex justify-center align-middle items-center gap-2 text-textColor">
+    <div className="flex justify-center align-middle items-center gap-2 text-primary">
       <div
             className="bg-primary p-2 rounded-md"
             // style={{ backgroundColor:  }}

@@ -2,7 +2,8 @@
 import React from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Image from "next/image";
-import logoSVG from "@/public/img/logo.svg"
+import logoSVG from "@/public/img/logo.svg";
+import { WHATSAPP_CONTACT_PHONE } from "@/constants/fixtures";
 
 const Footer = () => {
   const socialMedia = [
@@ -16,14 +17,15 @@ const Footer = () => {
     <footer className="px-10 py-10 bg-primary text-primaryLight flex flex-row items-center justify-between max-md:px-5 max-md:flex-wrap max-md:space-y-10">
       <div className="space-y-10 w-full">
         <div className="flex items-center">
-          {/* <Icon icon="game-icons:house-keys" fontSize={40} className="" /> */}
-          <Image                 className="rounded-xl w-full h-[30vh] object-cover bg-textLightColor"
-                loader={() => logoSVG}
-                src={logoSVG}
-                alt="Logo"
-                height={400}
-                width={400}
-                unoptimized />
+          {/* <Image
+            className="rounded-xl w-full h-[10vh] object-cover"
+            loader={() => logoSVG}
+            src={logoSVG}
+            alt="Logo"
+            height={400}
+            width={400}
+            unoptimized
+          /> */}
           <span className="text-4xl font-semibold">G6 Real Estate</span>
         </div>
         <div>
@@ -46,12 +48,21 @@ const Footer = () => {
           <p className="text-xl font-semibold">Address</p>
           <p>Kigali, Rwanda</p>
           <p>
-            <a href="tel:+250788888888" className="hover:text-white">Call G6 Real Estate <span className="font-sans hover:underline">+250-788-888-888</span></a>
+            <a href={`tel:+${WHATSAPP_CONTACT_PHONE}`} className="hover:text-white">
+              Call G6 Real Estate{" "}
+              <span className="font-sans hover:underline">
+                +{WHATSAPP_CONTACT_PHONE}
+              </span>
+            </a>
           </p>
           <div className="flex flex-row items-center justify-start gap-5">
             {socialMedia.map((elt) => (
               <div key={elt.url} className="p-2 bg-white/10 rounded-full z-50">
-                <a href={elt.url} target="_blank" className="z-1 hover:text-white">
+                <a
+                  href={elt.url}
+                  target="_blank"
+                  className="z-1 hover:text-white"
+                >
                   <Icon
                     icon={elt.icon}
                     fontSize={18}

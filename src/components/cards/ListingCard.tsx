@@ -4,7 +4,7 @@ import Image from "next/image";
 import { ListingType } from "@/constants/interfaces";
 import LocationComponent from "../LocationComponent";
 import { handleContactWhatsapp } from "@/util/helpers";
-import BaseButton from "../BaseButton";
+import BaseButton from "../buttons/BaseButton";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
 

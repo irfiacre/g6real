@@ -39,7 +39,7 @@ const BaseInput = ({
         className={`block w-full p-2 h-14 ${
           error
             ? "bg-red-50 border border-red-500 text-red-900"
-            : "bg-backgroundColor border border-borderColorLight focus:bg-white focus:border-borderColorLight"
+            : "bg-white border border-borderColorLight focus:bg-white focus:border-borderColorLight"
         } text-md rounded-md  focus:outline-none disabled:bg-backgroundColor2`}
         placeholder={`Enter ${placeholder || ""}`}
         required={required || true}

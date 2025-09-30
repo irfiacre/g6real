@@ -3,7 +3,7 @@ import React, { useCallback, useState } from "react";
 import Image from "next/image";
 import { formatPrice, handleContactWhatsapp } from "@/util/helpers";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import BaseButton from "@/src/components/BaseButton";
+import BaseButton from "@/src/components/buttons/BaseButton";
 import { LISTINGS } from "@/constants/fixtures";
 import YouTube from "react-youtube";
 import LocationComponent from "@/src/components/LocationComponent";
